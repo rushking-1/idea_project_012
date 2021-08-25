@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div</title>
+
+</head>
+<style>
+    .news[title]{
+        background:magenta;
+    }
+
+    .news[title=demo]{
+        background:black;
+    }
+    .news[title^="zh"]{
+        background:green;
+    }
+    .news[title*="demo"]{
+        background:red;
+    }
+</style>
+<body>
+
+
+<div class="news" title="zhan">
+    <p>第一段</p>
+</div>
+<div class="news" title="zhong">
+    <p>第二段</p>
+</div>
+<div class="news" >
+    <p>第三段</p>
+</div>
+<div class="news" >
+    <p>第四段</p>
+</div>
+
+<div class="news" title="5">
+    <p>第五段</p>
+</div>
+<div class="news" title="demo">
+    <p>第六段</p>
+</div>
+<div class="news" >
+    <p>第七段</p>
+</div>
+<div class="news" >
+    <p>第八段</p>
+</div>
+<div class="news" title="demoly">
+    <p>第九段</p>
+</div>
+<div class="news" title="10" >
+    <p>第十段</p>
+</div>
+
+
+</body>
+
+</html>

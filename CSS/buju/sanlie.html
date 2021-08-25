@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三列布局</title>
+
+    <style>
+        .content {
+            float: left;
+            width: 100%;
+
+
+
+        }
+        .left {
+            float: left;
+            width: 190px;
+            margin-left: -100%;
+            position: relative;
+            left: -190px;
+            background-color: gray;
+
+        }
+        .right {
+            float: left;
+            width: 230px;
+            margin-left: -230px;
+            position: relative;
+            right: -230px;
+
+        }
+        #body-content {
+            padding: 0 200px 0 190px;
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="body-content">
+    <div class="content">
+        flex实现三列布局有多种代码表示方式，可以使用flex-basis与flex-grow搭配着实现，
+        也可以用width和flex:1（flex-grow,flex-shrink,flex-basis的缩写）实现等等，
+        原理都是一样，只是代码的组织方式不一样，这里总结flex-basis和flex-grow的实现方式
+    </div>
+    <div class="left">
+        <img src="3.jpg" width="190"   height="200" >
+
+    </div>
+    <div class="right">
+        <img src="2.jpg" width="190"   height="200">
+    </div>
+</div>
+
+</body>
+</html>

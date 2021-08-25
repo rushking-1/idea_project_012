@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内部引用和外部应用script标签</title>
+</head>
+<body>
+<!--内部引用script标签-->
+<script type="text/javascript">
+    document.write("Hello World!"+"内部引用script标签"+"<br/>");
+</script>
+
+<!--外部引用标签-->
+<script src="Outer.js" ></script>
+
+<script>
+    // var 5Name=9;
+    var getName=9;
+    var $age=9;
+    var _sayHello=9;
+</script>
+
+
+</body>
+</html>

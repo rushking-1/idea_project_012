@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>注册</title>
+</head>
+<body>
+<form action="http://localhost:8080/html/register" method="post">
+    姓名
+    <input type="text" name="name" />
+    年龄
+    <input type="text" name="age" />
+    学历：
+    <select name="grade">
+        <option value="z">专科</option>
+        <option value="b" selected>本科</option>
+        <option value="y">研究生</option>
+    </select><br>
+    <br>
+    性别：
+    男<input type="radio" name="sex" value="男" />
+    女<input type="radio" name="sex"  value="女" />
+    婚姻：
+    是<input type="radio" name="marry" value="是" />
+    否<input type="radio" name="marry"  value="否" /><br>
+
+    身份证号
+    <input type="text" name="shenfen" /><br>
+    地址
+    <input type="text" name="add" />
+    工作单位
+    <input type="text" name="danwei" /><br>
+    微信
+    <input type="text" name="wechat" />
+    电话
+    <input type="text" name="tel" />
+    收入
+    <select name="grade1">
+        <option value="z">10000以下</option>
+        <option value="b" selected>10000-20000</option>
+        <option value="y">20000以上</option>
+    </select><br>
+
+    简介：<br>
+    <!--文本域没有value属性，用户填写的就是value-->
+    <textarea rows="10" cols="50" name="introduction"></textarea><br>
+    <input type="submit" value="注册" />
+    <input type="reset" value="重置" />
+</form>
+</body>
+</html>

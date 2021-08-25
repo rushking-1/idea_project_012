@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转换为大写字母</title>
+</head>
+<body>
+<script>
+    var name= "hello";
+
+    var sentence= 'good afternoon, mr mike.';
+    function changeStr(str) {
+        var arr = str.toLowerCase().split(" ");
+        arr.forEach((item, index) => {
+            arr[index] = item[0].toUpperCase() + item.substring(1, item.length);
+        });
+        return arr.join(" ");
+    }
+    var money="￥20";
+    document.write(name+"<br/>")
+    document.write("转化为大写"+"<br/>")
+    document.write(name.toUpperCase()+"<br/>")//转化为大写；
+    document.write("---------------------"+"<br/>")//转化为大写；
+    document.write(sentence+"<br/>")//转化为大写；
+    document.write("单词首字母大写"+"<br/>")//转化为大写；
+    document.write(changeStr(sentence)+"<br/>")//转化为大写；
+    document.write("---------------------"+"<br/>")//转化为大写；
+
+    document.write(money+"<br/>")//转化为大写；
+    document.write("只把金额取出来"+"<br/>")//转化为大写；
+    document.write(money[1]+money[2]+"<br/>")//转化为大写；
+
+
+
+</script>
+</body>
+</html>

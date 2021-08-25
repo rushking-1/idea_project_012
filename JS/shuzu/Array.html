@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组基本操作</title>
+</head>
+<body>
+<script>
+    var a = '[a, b, c, d]';
+    var b = [1, 2, 3, 4];
+    document.write("a='[a, b, c, d]'"+" 是数组"+" "+Array.isArray(a)+"<br/>")
+    document.write("b=[a, b, c, d]"+" 是数组"+" "+Array.isArray(b)+"<br/>")
+
+    //编写程序，将下面数组中的每一项都乘以2。
+    var c = [1,2,3,4,5]; // should output [2,4,6,8,10]
+    for (let i = 0; i < c.length; i++) {
+       c[i]=c[i]*2;
+    }
+    document.write("--------------------"+"<br/>")
+    document.write("c = [1,2,3,4,5]"+"<br/>")
+    document.write("每一项都乘以2"+"<br/>")
+    document.write("c="+"["+c+"]"+"<br/>")
+    document.write("------------------------"+"<br/>")
+</script>
+
+<script>
+    var colors = ["Red", "Green", "White", "Black"];
+    // case 1 output: 'Red Green White Black'
+    // case 2 output: 'Red+Green+White+Black'
+    // case 3 output: 'Red,Green,White,Black'
+
+    document.write("colors = [\"Red\", \"Green\", \"White\", \"Black\"]"+"</br>")
+    document.write("三种转换方式"+"</br>")
+    document.write(colors.join(" ")+"</br>")
+    document.write(colors.join("+")+"</br>")
+    document.write(colors.join(",")+"</br>")
+    document.write("--------------------"+"<br/>")
+</script>
+<script>
+    var a = [5,1,8,10,4]; // should output: [10,8,5,4,1]
+    function Sort(arr) {
+        var len = arr.length;
+        for (var i = 0; i < len-1; i++) {
+            for (var j = 0; j < len - 1 - i; j++) {
+                // 相邻元素两两对比，元素交换，大的元素交换到后面
+                if (arr[j] < arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+    document.write(a+"<br/>")
+    document.write("按照从大到小进行排列"+"<br/>")
+    document.write(Sort(a)+"<br/>")
+    document.write("--------------------"+"<br/>")
+</script>
+<script>
+    //编程程序，找出下列数组中出现频率最高的元素。
+    var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]; // should output: 'a'
+    var mostVal; // 数组中出现次数最多的元素
+    var tempObj = {};
+    for(var i=arr.length-1; i>=0; i--){
+        if(tempObj[arr[i]]){ // 得到元素出现的次数，并组成obj
+            tempObj[arr[i]] = tempObj[arr[i]]+1;
+        }else{
+            tempObj[arr[i]] = 1;
+        }
+    }
+    for(var key in tempObj){ // 从对象中得到数组中出现最多的元素
+        if(!mostVal){
+            mostVal = key;
+        }else if(tempObj[mostVal]<tempObj[key]){
+            mostVal = key;
+        }
+    }
+    document.write(" arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]; "+"<br/>")
+    document.write("arr中出现次数最多的为"+mostVal)
+</script>
+</body>
+</html>

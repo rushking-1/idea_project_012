@@ -1,0 +1,1 @@
+document.write("Hello world!"+"外部引用标签"+"<br/>");
